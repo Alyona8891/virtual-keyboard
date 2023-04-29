@@ -4,9 +4,12 @@ document.body.className = 'page';
 const main = document.createElement('main');
 main.className = 'page__main-page main-page';
 document.body.prepend(main);
-const header = document.createElement('header');
+/*const header = document.createElement('header');
 header.className = 'page__header-page';
-document.body.prepend(header);
+document.body.prepend(header);*/
+const textAreaBlock = document.createElement('textarea');
+textAreaBlock.className = 'main-page__textarea-block textarea-block';
+main.append(textAreaBlock);
 const keyboardBlock = document.createElement('div');
 keyboardBlock.className = 'main-page__keyboard-block keyboard-block';
 main.append(keyboardBlock);

@@ -10,6 +10,7 @@ document.body.prepend(header);*/
 const textAreaBlock = document.createElement('textarea');
 textAreaBlock.className = 'main-page__textarea-block textarea-block';
 main.append(textAreaBlock);
+textAreaBlock.focus();
 const keyboardBlock = document.createElement('div');
 keyboardBlock.className = 'main-page__keyboard-block keyboard-block';
 main.append(keyboardBlock);
@@ -24,9 +25,21 @@ keyboardBlock.append(keyboardInnerBlock);
 
 function createBtn(a, b, classBlockColor, classTopColor, classBlockSize, classTopSize, capsLock) {
   const btnBlock = document.createElement('div');
-  btnBlock.className = `keyboard-block__btn btn ${classBlockSize} ${classBlockColor}`;
+  btnBlock.className = 'keyboard-block__btn btn';
+  if (classBlockSize) {
+    btnBlock.classList.add(classBlockSize);
+  }
+  if (classBlockColor) {
+    btnBlock.classList.add(classBlockColor);
+  }
   const btnTopBlock = document.createElement('div');
-  btnTopBlock.className = `btn__top-block ${classTopSize} ${classTopColor}`;
+  btnTopBlock.className = 'btn__top-block';
+  if (classTopSize) {
+    btnTopBlock.classList.add(classTopSize);
+  }
+  if (classTopColor) {
+    btnTopBlock.classList.add(classTopColor);
+  }
   btnBlock.append(btnTopBlock);
   const btnBlockRow1 = document.createElement('div');
   btnBlockRow1.className = 'btn__row1';
@@ -45,27 +58,35 @@ function createBtn(a, b, classBlockColor, classTopColor, classBlockSize, classTo
   }
   btnTopBlock.append(btnBlockRow2);
   btnBlock.addEventListener('click', function my() {
-    textAreaBlock.focus();
     const key = btnBlockRow2.textContent;
+    let position = textAreaBlock.selectionStart;
     if (key === 'BACKSPACE') {
-      const position = textAreaBlock.selectionStart;
       textAreaBlock.value = textAreaBlock.value.slice(0, position - 1) + textAreaBlock.value.slice(position);
       textAreaBlock.selectionStart = position - 1;
       textAreaBlock.selectionEnd = position - 1;
     } else if (key === 'DEL') {
-      const position = textAreaBlock.selectionStart;
       textAreaBlock.value = textAreaBlock.value.slice(0, position) + textAreaBlock.value.slice(position + 1);
       textAreaBlock.selectionStart = position;
       textAreaBlock.selectionEnd = position;
     } else if (key === 'ENTER') {
-      textAreaBlock.value += '\n';
+      position = textAreaBlock.selectionStart;
+      textAreaBlock.value = textAreaBlock.value.slice(0, position) + '\n' + textAreaBlock.value.slice(position);
+      textAreaBlock.selectionStart = position + 1;
+      textAreaBlock.selectionEnd = position + 1;
     } else if (key === 'TAB') {
-      textAreaBlock.value += '  ';
+      position = textAreaBlock.selectionStart;
+      textAreaBlock.value = textAreaBlock.value.slice(0, position) + '  ' + textAreaBlock.value.slice(position);
+      textAreaBlock.selectionStart = position + 2;
+      textAreaBlock.selectionEnd = position + 2;
     } else if (key === 'SHIFT' || key === 'ALT' || key === 'CTRL' || key === 'WIN' || key === 'CAPS LOCK') {
       console.log();
     } else {
-      textAreaBlock.value += key.toLowerCase();
+      position = textAreaBlock.selectionStart;
+      textAreaBlock.value = textAreaBlock.value.slice(0, position) + key.toLowerCase() + textAreaBlock.value.slice(position);
+      textAreaBlock.selectionStart = position + 1;
+      textAreaBlock.selectionEnd = position + 1;
     }
+    textAreaBlock.focus();
   })
   return btnBlock;
 }
@@ -88,3 +109,28 @@ for (let i = 0; i < keyboard.length; i += 1) {
     keyboardInnerBlock.append(createBtn(keyboard[i].row1, keyboard[i].row2));
   }
 }
+
+document.addEventListener('keydown', function(event) {
+  const codeMy = event.code.slice(-1);
+  console.log(event.code);
+  const arrBtnRow2 = document.querySelectorAll('.btn__row2');
+
+  const arrBtn = document.querySelectorAll('.btn');
+  arrBtnRow2.forEach((el, i) => {
+    if(codeMy === el.textContent) {
+      arrBtn[i].classList.add('btn_active');
+    }
+  })
+});
+document.addEventListener('keyup', function(event) {
+  const codeMy = event.code.slice(-1);
+  console.log(codeMy);
+  const arrBtnRow2 = document.querySelectorAll('.btn__row2');
+
+  const arrBtn = document.querySelectorAll('.btn');
+  arrBtnRow2.forEach((el, i) => {
+    if(codeMy === el.textContent) {
+      arrBtn[i].classList.remove('btn_active');
+    }
+  })
+});

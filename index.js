@@ -9,6 +9,9 @@ const keyboardRuShift = [{ symbol: 'ё', keyCode: 'backquote' }, { symbol: '!', 
 
 
 const textAreaBlock = document.createElement('textarea');
+const btnClickSound = new Audio();
+btnClickSound.src = './source/2.mp3';
+btnClickSound.volume = 0.05;
 
 function createKeyboard(arr) {
   document.body.className = 'page';
@@ -84,6 +87,7 @@ function createBtn(a, c, classBlockColor, classTopColor, classBlockSize, classTo
   }
 
   btnBlock.addEventListener('click', btnBlockHandler);
+  btnBlock.addEventListener('click', () => btnClickSound.play());
   return btnBlock;
 }
 

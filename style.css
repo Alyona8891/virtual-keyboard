@@ -62,19 +62,18 @@
   justify-content: center;
   padding-top: 3px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: 0.2s;
+
   cursor: pointer;
 }
 
 .btn:active {
-  transition: 0.2s;
   scale: 0.95;
 }
 
 .btn_active {
-  transition: 0.2s;
   scale: 0.95;
 }
+
 .keyboard-block__btn {
   margin-right: 4px;
   margin-bottom: 4px;
@@ -103,7 +102,6 @@
   background: url(./source/svg-btn/key-edge-top-left.svg) no-repeat top left, url(./source/svg-btn/key-edge-top-right.svg) no-repeat top right, url(./source/svg-btn/key-edge-bottom-right.svg) no-repeat bottom right, url(./source/svg-btn/key-edge-bottom-left.svg) no-repeat bottom left, rgba(255, 108, 75, 0.671);
   background-blend-mode: multiply;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: 0.2s;
 }
 
  .btn_blue {
@@ -112,7 +110,7 @@
   background-blend-mode: multiply;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: rgba(232, 95, 86, 1);
-  transition: 0.2s;
+  
 }
 
 .btn__top-block_blue {

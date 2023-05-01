@@ -1,10 +1,11 @@
 let resultArr = [];
-const keyboard = [{ row2: '`', keyCode: 'backquote' }, { row2: '1', keyCode: 'digit1' }, { row2: '2', keyCode: 'digit2' }, { row2: '3', keyCode: 'digit3' }, { row2: '4', keyCode: 'digit4' }, { row2: '5', keyCode: 'digit5' }, { row2: '6', keyCode: 'digit6' }, { row2: '7', keyCode: 'digit7' }, { row2: '8', keyCode: 'digit8' }, { row2: '9', keyCode: 'digit9' }, { row2: '0', keyCode: 'digit0' }, {row2: '-', keyCode: 'minus' }, {row2: '=', keyCode: 'equal' }, { row2: 'BACKSPACE', keyCode: 'backspace' }, { row2: 'TAB', keyCode: 'tab' }, { row2: 'q', keyCode: 'keyq' }, { row2: 'w', keyCode: 'keyw' }, { row2: 'e', keyCode: 'keye' }, { row2: 'r', keyCode: 'keyr' }, { row2: 't', keyCode: 'keyt' }, { row2: 'y', keyCode: 'keyy' }, { row2: 'u', keyCode: 'keyu' }, { row2: 'i', keyCode: 'keyi' }, { row2: 'o', keyCode: 'keyo' }, { row2: 'p', keyCode: 'keyp' }, { row2: '[', keyCode: 'bracketleft' }, { row2: ']', keyCode: 'bracketright' }, { row2: '\\',  keyCode: 'backslash' }, { row2: 'DEL', keyCode: 'delete' }, { row2: 'CAPS LOCK', keyCode: 'capslock' }, { row2: 'a', keyCode: 'keya' }, { row2: 's', keyCode: 'keys' }, {  row2: 'd', keyCode: 'keyd' }, { row2: 'f', keyCode: 'keyf' }, { row2: 'g', keyCode: 'keyg' }, { row2: 'h', keyCode: 'keyh' }, { row2: 'j', keyCode: 'keyj' }, { row2: 'k', keyCode: 'keyk' }, { row2: 'l', keyCode: 'keyl' }, { row2: ';', keyCode: 'semicolon' }, { row2: '\'', keyCode: 'quote' }, { row2: 'ENTER', keyCode: 'enter' }, { row2: 'SHIFT', keyCode: 'shiftleft' }, { row2: 'z', keyCode: 'keyz' }, { row2: 'x', keyCode: 'keyx' }, { row2: 'c', keyCode: 'keyc' }, { row2: 'v', keyCode: 'keyv' }, { row2: 'b', keyCode: 'keyb' }, { row2: 'n', keyCode: 'keyn' }, { row2: 'm', keyCode: 'keym' }, { row2: ',', keyCode: 'comma' }, { row2: '.', keyCode: 'period' }, { row2: '/', keyCode: 'slash' }, { row2: '▲', keyCode: 'arrowup' }, { row2: 'SHIFT', keyCode: 'shiftright' }, { row2: 'CTRL', keyCode: 'controlleft' }, { row2: 'WIN', keyCode: 'metaleft' }, { row2: 'ALT', keyCode: 'altleft' }, { row2: ' ', keyCode: 'space' }, { row2: 'ALT', keyCode: 'altright' }, { row2: '◄', keyCode: 'arrowleft' }, { row2: '▼', keyCode: 'arrowdown' }, { row2: '►', keyCode: 'arrowright' }, { row2: 'CTRL', keyCode: 'controlright' }, ];
+const keyboardEn = [{ symbol: '`', keyCode: 'backquote' }, { symbol: '1', keyCode: 'digit1' }, { symbol: '2', keyCode: 'digit2' }, { symbol: '3', keyCode: 'digit3' }, { symbol: '4', keyCode: 'digit4' }, { symbol: '5', keyCode: 'digit5' }, { symbol: '6', keyCode: 'digit6' }, { symbol: '7', keyCode: 'digit7' }, { symbol: '8', keyCode: 'digit8' }, { symbol: '9', keyCode: 'digit9' }, { symbol: '0', keyCode: 'digit0' }, {symbol: '-', keyCode: 'minus' }, {symbol: '=', keyCode: 'equal' }, { symbol: 'BACKSPACE', keyCode: 'backspace' }, { symbol: 'TAB', keyCode: 'tab' }, { symbol: 'q', keyCode: 'keyq' }, { symbol: 'w', keyCode: 'keyw' }, { symbol: 'e', keyCode: 'keye' }, { symbol: 'r', keyCode: 'keyr' }, { symbol: 't', keyCode: 'keyt' }, { symbol: 'y', keyCode: 'keyy' }, { symbol: 'u', keyCode: 'keyu' }, { symbol: 'i', keyCode: 'keyi' }, { symbol: 'o', keyCode: 'keyo' }, { symbol: 'p', keyCode: 'keyp' }, { symbol: '[', keyCode: 'bracketleft' }, { symbol: ']', keyCode: 'bracketright' }, { symbol: '\\',  keyCode: 'backslash' }, { symbol: 'DEL', keyCode: 'delete' }, { symbol: 'CAPS LOCK', keyCode: 'capslock' }, { symbol: 'a', keyCode: 'keya' }, { symbol: 's', keyCode: 'keys' }, {  symbol: 'd', keyCode: 'keyd' }, { symbol: 'f', keyCode: 'keyf' }, { symbol: 'g', keyCode: 'keyg' }, { symbol: 'h', keyCode: 'keyh' }, { symbol: 'j', keyCode: 'keyj' }, { symbol: 'k', keyCode: 'keyk' }, { symbol: 'l', keyCode: 'keyl' }, { symbol: ';', keyCode: 'semicolon' }, { symbol: '\'', keyCode: 'quote' }, { symbol: 'ENTER', keyCode: 'enter' }, { symbol: 'SHIFT', keyCode: 'shiftleft' }, { symbol: 'z', keyCode: 'keyz' }, { symbol: 'x', keyCode: 'keyx' }, { symbol: 'c', keyCode: 'keyc' }, { symbol: 'v', keyCode: 'keyv' }, { symbol: 'b', keyCode: 'keyb' }, { symbol: 'n', keyCode: 'keyn' }, { symbol: 'm', keyCode: 'keym' }, { symbol: ',', keyCode: 'comma' }, { symbol: '.', keyCode: 'period' }, { symbol: '/', keyCode: 'slash' }, { symbol: '▲', keyCode: 'arrowup' }, { symbol: 'SHIFT', keyCode: 'shiftright' }, { symbol: 'CTRL', keyCode: 'controlleft' }, { symbol: 'WIN', keyCode: 'metaleft' }, { symbol: 'ALT', keyCode: 'altleft' }, { symbol: ' ', keyCode: 'space' }, { symbol: 'ALT', keyCode: 'altright' }, { symbol: '◄', keyCode: 'arrowleft' }, { symbol: '▼', keyCode: 'arrowdown' }, { symbol: '►', keyCode: 'arrowright' }, { symbol: 'CTRL', keyCode: 'controlright' }, ];
 
-const keyboardRu = [{ row2: 'ё', keyCode: 'backquote' }, { row2: '1', keyCode: 'digit1' }, { row2: '2', keyCode: 'digit2' }, { row2: '3', keyCode: 'digit3' }, { row2: '4', keyCode: 'digit4' }, { row2: '5', keyCode: 'digit5' }, { row2: '6', keyCode: 'digit6' }, { row2: '7', keyCode: 'digit7' }, { row2: '8', keyCode: 'digit8' }, { row2: '9', keyCode: 'digit9' }, { row2: '0', keyCode: 'digit0' }, {row2: '-', keyCode: 'minus' }, {row2: '=', keyCode: 'equal' }, { row2: 'BACKSPACE', keyCode: 'backspace' }, { row2: 'TAB', keyCode: 'tab' }, { row2: 'й', keyCode: 'keyq' }, { row2: 'ц', keyCode: 'keyw' }, { row2: 'у', keyCode: 'keye' }, { row2: 'k', keyCode: 'keyr' }, { row2: 'е', keyCode: 'keyt' }, { row2: 'н', keyCode: 'keyy' }, { row2: 'г', keyCode: 'keyu' }, { row2: 'ш', keyCode: 'keyi' }, { row2: 'щ', keyCode: 'keyo' }, { row2: 'з', keyCode: 'keyp' }, { row2: 'х', keyCode: 'bracketleft' }, { row2: 'ъ', keyCode: 'bracketright' }, { row2: '\\',  keyCode: 'backslash' }, { row2: 'DEL', keyCode: 'delete' }, { row2: 'CAPS LOCK', keyCode: 'capslock' }, { row2: 'ф', keyCode: 'keya' }, { row2: 'ы', keyCode: 'keys' }, {  row2: 'в', keyCode: 'keyd' }, { row2: 'а', keyCode: 'keyf' }, { row2: 'п', keyCode: 'keyg' }, { row2: 'р', keyCode: 'keyh' }, { row2: 'о', keyCode: 'keyj' }, { row2: 'л', keyCode: 'keyk' }, { row2: 'д', keyCode: 'keyl' }, { row2: 'ж', keyCode: 'semicolon' }, { row2: '\'', keyCode: 'quote' }, { row2: 'ENTER', keyCode: 'enter' }, { row2: 'SHIFT', keyCode: 'shiftleft' }, { row2: 'я', keyCode: 'keyz' }, { row2: 'ч', keyCode: 'keyx' }, { row2: 'с', keyCode: 'keyc' }, { row2: 'м', keyCode: 'keyv' }, { row2: 'и', keyCode: 'keyb' }, { row2: 'т', keyCode: 'keyn' }, { row2: 'ь', keyCode: 'keym' }, { row2: 'б', keyCode: 'comma' }, { row2: 'ю', keyCode: 'period' }, { row2: '/', keyCode: 'slash' }, { row2: '▲', keyCode: 'arrowup' }, { row2: 'SHIFT', keyCode: 'shiftright' }, { row2: 'CTRL', keyCode: 'controlleft' }, { row2: 'WIN', keyCode: 'metaleft' }, { row2: 'ALT', keyCode: 'altleft' }, { row2: ' ', keyCode: 'space' }, { row2: 'ALT', keyCode: 'altright' }, { row2: '◄', keyCode: 'arrowleft' }, { row2: '▼', keyCode: 'arrowdown' }, { row2: '►', keyCode: 'arrowright' }, { row2: 'CTRL', keyCode: 'controlright' }, ];
-resultArr = keyboardRu;
+const keyboardRu = [{ symbol: 'ё', keyCode: 'backquote' }, { symbol: '1', keyCode: 'digit1' }, { symbol: '2', keyCode: 'digit2' }, { symbol: '3', keyCode: 'digit3' }, { symbol: '4', keyCode: 'digit4' }, { symbol: '5', keyCode: 'digit5' }, { symbol: '6', keyCode: 'digit6' }, { symbol: '7', keyCode: 'digit7' }, { symbol: '8', keyCode: 'digit8' }, { symbol: '9', keyCode: 'digit9' }, { symbol: '0', keyCode: 'digit0' }, {symbol: '-', keyCode: 'minus' }, {symbol: '=', keyCode: 'equal' }, { symbol: 'BACKSPACE', keyCode: 'backspace' }, { symbol: 'TAB', keyCode: 'tab' }, { symbol: 'й', keyCode: 'keyq' }, { symbol: 'ц', keyCode: 'keyw' }, { symbol: 'у', keyCode: 'keye' }, { symbol: 'к', keyCode: 'keyr' }, { symbol: 'е', keyCode: 'keyt' }, { symbol: 'н', keyCode: 'keyy' }, { symbol: 'г', keyCode: 'keyu' }, { symbol: 'ш', keyCode: 'keyi' }, { symbol: 'щ', keyCode: 'keyo' }, { symbol: 'з', keyCode: 'keyp' }, { symbol: 'х', keyCode: 'bracketleft' }, { symbol: 'ъ', keyCode: 'bracketright' }, { symbol: '\\',  keyCode: 'backslash' }, { symbol: 'DEL', keyCode: 'delete' }, { symbol: 'CAPS LOCK', keyCode: 'capslock' }, { symbol: 'ф', keyCode: 'keya' }, { symbol: 'ы', keyCode: 'keys' }, {  symbol: 'в', keyCode: 'keyd' }, { symbol: 'а', keyCode: 'keyf' }, { symbol: 'п', keyCode: 'keyg' }, { symbol: 'р', keyCode: 'keyh' }, { symbol: 'о', keyCode: 'keyj' }, { symbol: 'л', keyCode: 'keyk' }, { symbol: 'д', keyCode: 'keyl' }, { symbol: 'ж', keyCode: 'semicolon' }, { symbol: 'э', keyCode: 'quote' }, { symbol: 'ENTER', keyCode: 'enter' }, { symbol: 'SHIFT', keyCode: 'shiftleft' }, { symbol: 'я', keyCode: 'keyz' }, { symbol: 'ч', keyCode: 'keyx' }, { symbol: 'с', keyCode: 'keyc' }, { symbol: 'м', keyCode: 'keyv' }, { symbol: 'и', keyCode: 'keyb' }, { symbol: 'т', keyCode: 'keyn' }, { symbol: 'ь', keyCode: 'keym' }, { symbol: 'б', keyCode: 'comma' }, { symbol: 'ю', keyCode: 'period' }, { symbol: '.', keyCode: 'slash' }, { symbol: '▲', keyCode: 'arrowup' }, { symbol: 'SHIFT', keyCode: 'shiftright' }, { symbol: 'CTRL', keyCode: 'controlleft' }, { symbol: 'WIN', keyCode: 'metaleft' }, { symbol: 'ALT', keyCode: 'altleft' }, { symbol: ' ', keyCode: 'space' }, { symbol: 'ALT', keyCode: 'altright' }, { symbol: '◄', keyCode: 'arrowleft' }, { symbol: '▼', keyCode: 'arrowdown' }, { symbol: '►', keyCode: 'arrowright' }, { symbol: 'CTRL', keyCode: 'controlright' }, ];
 
-const keyboard2 = [{ row1: '~', row2: '`', keyCode: 'backquote' }, { row1: '!', row2: '1', keyCode: 'digit1' }, { row1: '@', row2: '2', keyCode: 'digit2' }, { row1: '#', row2: '3', keyCode: 'digit3' }, { row1: '$', row2: '4', keyCode: 'digit4' }, { row1: '%', row2: '5', keyCode: 'digit5' }, { row1: '^', row2: '6', keyCode: 'digit6' }, { row1: '&', row2: '7', keyCode: 'digit7' }, { row1: '*', row2: '8', keyCode: 'digit8' }, { row1: '(', row2: '9', keyCode: 'digit9' }, { row1: ')', row2: '0', keyCode: 'digit0' }, { row1: '_', row2: '-', keyCode: 'minus' }, { row1: '+', row2: '=', keyCode: 'equal' }, { row1: null, row2: 'BACKSPACE', keyCode: 'backspace' }, { row1: null, row2: 'TAB', keyCode: 'tab' }, { row1: null, row2: 'Q', keyCode: 'keyq' }, { row1: null, row2: 'W', keyCode: 'keyw' }, { row1: null, row2: 'E', keyCode: 'keye' }, { row1: null, row2: 'R', keyCode: 'keyr' }, { row1: null, row2: 'T', keyCode: 'keyt' }, { row1: null, row2: 'Y', keyCode: 'keyy' }, { row1: null, row2: 'U', keyCode: 'keyu' }, { row1: null, row2: 'I', keyCode: 'keyi' }, { row1: null, row2: 'O', keyCode: 'keyo' }, { row1: null, row2: 'P', keyCode: 'keyp' }, { row1: null, row2: '[', keyCode: 'bracketleft' }, { row1: null, row2: ']', keyCode: 'bracketright' }, { row1: '|', row2: '\\',  keyCode: 'backslash' }, { row1: null, row2: 'DEL', keyCode: 'delete' }, { row1: null, row2: 'CAPS LOCK', keyCode: 'capslock' }, { row1: null, row2: 'A', keyCode: 'keya' }, { row1: null, row2: 'S', keyCode: 'keys' }, { row1: null, row2: 'D', keyCode: 'keyd' }, { row1: null, row2: 'F', keyCode: 'keyf' }, { row1: null, row2: 'G', keyCode: 'keyg' }, { row1: null, row2: 'H', keyCode: 'keyh' }, { row1: null, row2: 'J', keyCode: 'keyj' }, { row1: null, row2: 'K', keyCode: 'keyk' }, { row1: null, row2: 'L', keyCode: 'keyl' }, { row1: null, row2: ';', keyCode: 'semicolon' }, { row1: '"', row2: '\'', keyCode: 'quote' }, { row1: null, row2: 'ENTER', keyCode: 'enter' }, { row1: null, row2: 'SHIFT', keyCode: 'shiftleft' }, { row1: null, row2: 'Z', keyCode: 'keyz' }, { row1: null, row2: 'X', keyCode: 'keyx' }, { row1: null, row2: 'C', keyCode: 'keyc' }, { row1: null, row2: 'V', keyCode: 'keyv' }, { row1: null, row2: 'B', keyCode: 'keyb' }, { row1: null, row2: 'N', keyCode: 'keyn' }, { row1: null, row2: 'M', keyCode: 'keym' }, { row1: null, row2: '.', keyCode: 'comma' }, { row1: null, row2: ',', keyCode: 'period' }, { row1: null, row2: '/', keyCode: 'slash' }, { row1: null, row2: '▲', keyCode: 'arrowup' }, { row1: null, row2: 'SHIFT', keyCode: 'shiftright' }, { row1: null, row2: 'CTRL', keyCode: 'controlleft' }, { row1: null, row2: 'WIN', keyCode: 'metaleft' }, { row1: null, row2: 'ALT', keyCode: 'altleft' }, { row1: null, row2: ' ', keyCode: 'space' }, { row1: null, row2: 'ALT', keyCode: 'altright' }, { row1: null, row2: '◄', keyCode: 'arrowleft' }, { row1: null, row2: '▼', keyCode: 'arrowdown' }, { row1: null, row2: '►', keyCode: 'arrowright' }, { row1: null, row2: 'CTRL', keyCode: 'controlright' }, ];
+const keyboardEnShift = [{ symbol: '~', keyCode: 'backquote' }, { symbol: '!', keyCode: 'digit1' }, { symbol: '@', keyCode: 'digit2' }, { symbol: '#', keyCode: 'digit3' }, { symbol: '$', keyCode: 'digit4' }, { symbol: '%', keyCode: 'digit5' }, { symbol: '^', keyCode: 'digit6' }, { symbol: '&', keyCode: 'digit7' }, { symbol: '*', keyCode: 'digit8' }, { symbol: '(', keyCode: 'digit9' }, { symbol: ')', keyCode: 'digit0' }, {symbol: '_', keyCode: 'minus' }, {symbol: '+', keyCode: 'equal' }, { symbol: 'BACKSPACE', keyCode: 'backspace' }, { symbol: 'TAB', keyCode: 'tab' }, { symbol: 'q', keyCode: 'keyq' }, { symbol: 'w', keyCode: 'keyw' }, { symbol: 'e', keyCode: 'keye' }, { symbol: 'r', keyCode: 'keyr' }, { symbol: 't', keyCode: 'keyt' }, { symbol: 'y', keyCode: 'keyy' }, { symbol: 'u', keyCode: 'keyu' }, { symbol: 'i', keyCode: 'keyi' }, { symbol: 'o', keyCode: 'keyo' }, { symbol: 'p', keyCode: 'keyp' }, { symbol: '{', keyCode: 'bracketleft' }, { symbol: '}', keyCode: 'bracketright' }, { symbol: '|',  keyCode: 'backslash' }, { symbol: 'DEL', keyCode: 'delete' }, { symbol: 'CAPS LOCK', keyCode: 'capslock' }, { symbol: 'a', keyCode: 'keya' }, { symbol: 's', keyCode: 'keys' }, {  symbol: 'd', keyCode: 'keyd' }, { symbol: 'f', keyCode: 'keyf' }, { symbol: 'g', keyCode: 'keyg' }, { symbol: 'h', keyCode: 'keyh' }, { symbol: 'j', keyCode: 'keyj' }, { symbol: 'k', keyCode: 'keyk' }, { symbol: 'l', keyCode: 'keyl' }, { symbol: ':', keyCode: 'semicolon' }, { symbol: '"', keyCode: 'quote' }, { symbol: 'ENTER', keyCode: 'enter' }, { symbol: 'SHIFT', keyCode: 'shiftleft' }, { symbol: 'z', keyCode: 'keyz' }, { symbol: 'x', keyCode: 'keyx' }, { symbol: 'c', keyCode: 'keyc' }, { symbol: 'v', keyCode: 'keyv' }, { symbol: 'b', keyCode: 'keyb' }, { symbol: 'n', keyCode: 'keyn' }, { symbol: 'm', keyCode: 'keym' }, { symbol: '<', keyCode: 'comma' }, { symbol: '>', keyCode: 'period' }, { symbol: '?', keyCode: 'slash' }, { symbol: '▲', keyCode: 'arrowup' }, { symbol: 'SHIFT', keyCode: 'shiftright' }, { symbol: 'CTRL', keyCode: 'controlleft' }, { symbol: 'WIN', keyCode: 'metaleft' }, { symbol: 'ALT', keyCode: 'altleft' }, { symbol: ' ', keyCode: 'space' }, { symbol: 'ALT', keyCode: 'altright' }, { symbol: '◄', keyCode: 'arrowleft' }, { symbol: '▼', keyCode: 'arrowdown' }, { symbol: '►', keyCode: 'arrowright' }, { symbol: 'CTRL', keyCode: 'controlright' }, ];
+
+const keyboardRuShift = [{ symbol: 'ё', keyCode: 'backquote' }, { symbol: '!', keyCode: 'digit1' }, { symbol: '"', keyCode: 'digit2' }, { symbol: '№', keyCode: 'digit3' }, { symbol: ';', keyCode: 'digit4' }, { symbol: '%', keyCode: 'digit5' }, { symbol: ':', keyCode: 'digit6' }, { symbol: '?', keyCode: 'digit7' }, { symbol: '*', keyCode: 'digit8' }, { symbol: '(', keyCode: 'digit9' }, { symbol: ')', keyCode: 'digit0' }, {symbol: '_', keyCode: 'minus' }, {symbol: '+', keyCode: 'equal' }, { symbol: 'BACKSPACE', keyCode: 'backspace' }, { symbol: 'TAB', keyCode: 'tab' }, { symbol: 'й', keyCode: 'keyq' }, { symbol: 'ц', keyCode: 'keyw' }, { symbol: 'у', keyCode: 'keye' }, { symbol: 'к', keyCode: 'keyr' }, { symbol: 'е', keyCode: 'keyt' }, { symbol: 'н', keyCode: 'keyy' }, { symbol: 'г', keyCode: 'keyu' }, { symbol: 'ш', keyCode: 'keyi' }, { symbol: 'щ', keyCode: 'keyo' }, { symbol: 'з', keyCode: 'keyp' }, { symbol: 'х', keyCode: 'bracketleft' }, { symbol: 'ъ', keyCode: 'bracketright' }, { symbol: '/',  keyCode: 'backslash' }, { symbol: 'DEL', keyCode: 'delete' }, { symbol: 'CAPS LOCK', keyCode: 'capslock' }, { symbol: 'ф', keyCode: 'keya' }, { symbol: 'ы', keyCode: 'keys' }, {  symbol: 'в', keyCode: 'keyd' }, { symbol: 'а', keyCode: 'keyf' }, { symbol: 'п', keyCode: 'keyg' }, { symbol: 'р', keyCode: 'keyh' }, { symbol: 'о', keyCode: 'keyj' }, { symbol: 'л', keyCode: 'keyk' }, { symbol: 'д', keyCode: 'keyl' }, { symbol: 'ж', keyCode: 'semicolon' }, { symbol: 'э', keyCode: 'quote' }, { symbol: 'ENTER', keyCode: 'enter' }, { symbol: 'SHIFT', keyCode: 'shiftleft' }, { symbol: 'я', keyCode: 'keyz' }, { symbol: 'ч', keyCode: 'keyx' }, { symbol: 'с', keyCode: 'keyc' }, { symbol: 'м', keyCode: 'keyv' }, { symbol: 'и', keyCode: 'keyb' }, { symbol: 'т', keyCode: 'keyn' }, { symbol: 'ь', keyCode: 'keym' }, { symbol: 'б', keyCode: 'comma' }, { symbol: 'ю', keyCode: 'period' }, { symbol: ',', keyCode: 'slash' }, { symbol: '▲', keyCode: 'arrowup' }, { symbol: 'SHIFT', keyCode: 'shiftright' }, { symbol: 'CTRL', keyCode: 'controlleft' }, { symbol: 'WIN', keyCode: 'metaleft' }, { symbol: 'ALT', keyCode: 'altleft' }, { symbol: ' ', keyCode: 'space' }, { symbol: 'ALT', keyCode: 'altright' }, { symbol: '◄', keyCode: 'arrowleft' }, { symbol: '▼', keyCode: 'arrowdown' }, { symbol: '►', keyCode: 'arrowright' }, { symbol: 'CTRL', keyCode: 'controlright' }, ];
 
 
 const textAreaBlock = document.createElement('textarea');
@@ -14,7 +15,10 @@ function createKeyboard(arr) {
   const main = document.createElement('main');
   main.className = 'page__main-page main-page';
   document.body.prepend(main);
-  localStorage.setItem('lang', 'en');
+  if(!localStorage.lang) {
+    localStorage.setItem('lang', 'en');
+  }
+  
   textAreaBlock.className = 'main-page__textarea-block textarea-block';
   main.append(textAreaBlock);
   textAreaBlock.focus();
@@ -24,27 +28,27 @@ function createKeyboard(arr) {
   const keyboardInnerBlock = document.createElement('div');
   keyboardInnerBlock.className = 'keyboard-block__inner-block';
   keyboardBlock.append(keyboardInnerBlock);
-  for (let i = 0; i < keyboard.length; i += 1) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (i === 0 || i === 53 || i === 61 || i === 62 || i === 60) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_orange', 'btn__top-block_orange'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_orange', 'btn__top-block_orange'));
     } else if (i === 13 ) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_backspace-size', 'btn__top-block_backspace-size'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_backspace-size', 'btn__top-block_backspace-size'));
     } else if (i === 14 || i === 55 || i === 63) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_tab-size', 'btn__top-block_tab-size'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_tab-size', 'btn__top-block_tab-size'));
     } else if (i === 28 || i === 56 || i === 57 || i === 59) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_blue', 'btn__top-block_blue'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_blue', 'btn__top-block_blue'));
     } else if (i === 29) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_orange', 'btn__top-block_orange', 'btn_backspace-size', 'btn__top-block_backspace-size', 'capsLock'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_orange', 'btn__top-block_orange', 'btn_backspace-size', 'btn__top-block_backspace-size', 'capsLock'));
     } else if (i === 41) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_orange', 'btn__top-block_orange', 'btn_enter-size', 'btn__top-block_enter-size'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_orange', 'btn__top-block_orange', 'btn_enter-size', 'btn__top-block_enter-size'));
     } else if (i === 42) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_enter-size', 'btn__top-block_enter-size'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_enter-size', 'btn__top-block_enter-size'));
     } else if (i === 54) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_backspace-size', 'btn__top-block_backspace-size'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_blue', 'btn__top-block_blue', 'btn_backspace-size', 'btn__top-block_backspace-size'));
     } else if (i === 58) {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode, 'btn_orange', 'btn__top-block_orange', 'btn_space-size', 'btn__top-block_space-size'));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode, 'btn_orange', 'btn__top-block_orange', 'btn_space-size', 'btn__top-block_space-size'));
     } else {
-      keyboardInnerBlock.append(createBtn(arr[i].row2, keyboard[i].keyCode));
+      keyboardInnerBlock.append(createBtn(arr[i].symbol, arr[i].keyCode));
     }
   }
 }
@@ -84,8 +88,10 @@ function createBtn(a, c, classBlockColor, classTopColor, classBlockSize, classTo
 }
 
 function btnBlockHandler(event) {
+  changeTextareaValue(event.target.textContent);
+}
 
-  const key = event.target.textContent;
+function changeTextareaValue(key) {
   let position = textAreaBlock.selectionStart;
 
   if (key === 'BACKSPACE') {
@@ -118,54 +124,56 @@ function btnBlockHandler(event) {
   textAreaBlock.focus();
 }
 
-document.addEventListener('keydown', function(event) {
-  if(event.code === "Tab") {
-    event.preventDefault();
-    let position = textAreaBlock.selectionStart;
-      textAreaBlock.value = textAreaBlock.value.slice(0, position) + '  ' + textAreaBlock.value.slice(position);
-      textAreaBlock.selectionStart = position + 2;
-      textAreaBlock.selectionEnd = position + 2;
-  } else if(event.code === "MetaLeft") {
-    event.preventDefault();
-  }
+document.addEventListener('keydown', changeKeydown);
+function changeKeydown (event) {
+  event.preventDefault();
+  
   const arrBtn = document.querySelectorAll('.btn');
+
   arrBtn.forEach((el) => {
     if(event.code.toLowerCase() === el.id) {
       el.classList.add('btn_active');
+
+      changeTextareaValue(el.innerText);
     }
   })
-});
+}
 
-document.addEventListener('keyup', function(event) {
+document.addEventListener('keyup', changeKeyUp);
+function changeKeyUp (event) {
   const arrBtn = document.querySelectorAll('.btn');
   arrBtn.forEach((el) => {
     if(event.code.toLowerCase() === el.id) {
       el.classList.remove('btn_active');
     }
   })
-});
-
-resultArr = keyboard;
+}
+createResultArr();
 createKeyboard(resultArr);
 const capsLock = document.querySelector('#capslock');
 capsLock.addEventListener('click', handlerCapsLock);
 let capsLockNum = false;
 
+function createResultArr() {
+  localStorage.lang === 'en'? resultArr = keyboardEn : resultArr = keyboardRu;
+}
+
 function handlerCapsLock() {
   const btnMarker = document.querySelector('.btn__marker');
   btnMarker.classList.toggle('btn__marker_active');
+  createResultArr();
   if(!capsLockNum) {  
   resultArr.forEach(el => {
-    let row2Property = el.row2;
-    el.row2 = row2Property.toUpperCase();
+    let symbolProperty = el.symbol;
+    el.symbol = symbolProperty.toUpperCase();
   });
   renameBtns(resultArr);
   capsLockNum = true;
   } else {
     resultArr.forEach(el => {
-      let row2Property = el.row2;
-      if (el.row2.length === 1) {
-        el.row2 = row2Property.toLowerCase();
+      let symbolProperty = el.symbol;
+      if (el.symbol.length === 1) {
+        el.symbol = symbolProperty.toLowerCase();
       }
     });
     renameBtns(resultArr)
@@ -200,7 +208,7 @@ function renameBtns(arr) {
   arrElems.forEach((el, i) => {
     let elemCapsLock = document.querySelector('#capslock')
     if(el.parentNode !== elemCapsLock) {
-      el.innerText = arr[i].row2;
+      el.innerText = arr[i].symbol;
     }
   })
 
@@ -213,11 +221,88 @@ function changeLanguage() {
     renameBtns(resultArr);
     localStorage.lang = 'ru';
   } else {
-    resultArr = keyboard;
+    resultArr = keyboardEn;
     renameBtns(resultArr);
     localStorage.lang = 'en';
   }
 
 }
 
-runCtrlShift(changeLanguage, 'ShiftLeft', 'ControlLeft');
+function handlerShift(code) {
+
+  document.addEventListener('keydown', function(event) {
+    
+    if (event.code !== code) {
+        return;
+    }
+    resultArr = keyboardEnShift;
+    resultArr.forEach(el => {
+    let symbolProperty = el.symbol;
+    if (el.symbol.length === 1) {
+      el.symbol = symbolProperty.toUpperCase();
+    }
+  });
+    renameBtns(resultArr);
+  });
+
+  document.addEventListener('keyup', function(event) {
+    if (event.code !== code) {
+      return;
+  }
+    resultArr = keyboardEn;
+    resultArr.forEach(el => {
+    let symbolProperty = el.symbol;
+    if (el.symbol.length === 1) {
+      el.symbol = symbolProperty.toLowerCase();
+    }
+  });
+  renameBtns(resultArr);
+  });
+
+}
+
+runCtrlShift(changeLanguage, 'ControlLeft', 'AltLeft');
+runCtrlShift(handlerCapsLock, 'CapsLock');
+handlerShift('ShiftLeft');
+handlerShift('ShiftRight');
+const shiftleft = document.querySelector('#shiftleft');
+const shiftright = document.querySelector('#shiftright');
+shiftleft.addEventListener('mousedown', handlerShiftBtn1);
+shiftleft.addEventListener('mouseup', handlerShiftBtn2);
+shiftright.addEventListener('mousedown', handlerShiftBtn1);
+shiftright.addEventListener('mouseup', handlerShiftBtn2);
+
+function handlerShiftBtn1() { 
+
+  if(localStorage.lang === 'en') {
+    resultArr = keyboardEnShift;
+  } else if (localStorage.lang === 'ru') {
+    resultArr = keyboardRuShift;
+  }
+  resultArr.forEach(el => {
+    let symbolProperty = el.symbol;
+    if (el.symbol.length === 1 && capsLockNum === false) {
+      el.symbol = symbolProperty.toUpperCase();
+    } else if(el.symbol.length === 1 && capsLockNum === true) {
+      el.symbol = symbolProperty.toLowerCase();
+    }
+  });
+  renameBtns(resultArr);
+}
+function handlerShiftBtn2() { 
+
+  if(localStorage.lang === 'en') {
+    resultArr = keyboardEn;
+  } else {
+    resultArr = keyboardRu;
+  }
+  resultArr.forEach(el => {
+    let symbolProperty = el.symbol;
+    if (el.symbol.length === 1 && capsLockNum === false) {
+      el.symbol = symbolProperty.toLowerCase();
+    } else if(el.symbol.length === 1 && capsLockNum === true) {
+      el.symbol = symbolProperty.toUpperCase();
+    }
+  });
+  renameBtns(resultArr);
+}

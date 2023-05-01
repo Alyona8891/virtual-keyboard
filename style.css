@@ -3,6 +3,12 @@
   font-family: "Roboto Mono", serif;
   font-style: 500;
 }
+.main-page__text {
+  color: rgba(16, 64, 150, 1);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
 
 .textarea-block {
   padding: 10px;
@@ -19,11 +25,11 @@
 }
 
 .main-page__textarea-block {
-  margin: 20px auto;
+  margin: 30px auto 0px;
 }
 
 .main-page__keyboard-block {
-  margin: 20px auto 0px;
+  margin: 30px auto 30px;
 }
 
 .keyboard-block {

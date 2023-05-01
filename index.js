@@ -7,7 +7,6 @@ const keyboardEnShift = [{ symbol: '~', keyCode: 'backquote' }, { symbol: '!', k
 
 const keyboardRuShift = [{ symbol: 'ё', keyCode: 'backquote' }, { symbol: '!', keyCode: 'digit1' }, { symbol: '"', keyCode: 'digit2' }, { symbol: '№', keyCode: 'digit3' }, { symbol: ';', keyCode: 'digit4' }, { symbol: '%', keyCode: 'digit5' }, { symbol: ':', keyCode: 'digit6' }, { symbol: '?', keyCode: 'digit7' }, { symbol: '*', keyCode: 'digit8' }, { symbol: '(', keyCode: 'digit9' }, { symbol: ')', keyCode: 'digit0' }, {symbol: '_', keyCode: 'minus' }, {symbol: '+', keyCode: 'equal' }, { symbol: 'BACKSPACE', keyCode: 'backspace' }, { symbol: 'TAB', keyCode: 'tab' }, { symbol: 'й', keyCode: 'keyq' }, { symbol: 'ц', keyCode: 'keyw' }, { symbol: 'у', keyCode: 'keye' }, { symbol: 'к', keyCode: 'keyr' }, { symbol: 'е', keyCode: 'keyt' }, { symbol: 'н', keyCode: 'keyy' }, { symbol: 'г', keyCode: 'keyu' }, { symbol: 'ш', keyCode: 'keyi' }, { symbol: 'щ', keyCode: 'keyo' }, { symbol: 'з', keyCode: 'keyp' }, { symbol: 'х', keyCode: 'bracketleft' }, { symbol: 'ъ', keyCode: 'bracketright' }, { symbol: '/',  keyCode: 'backslash' }, { symbol: 'DEL', keyCode: 'delete' }, { symbol: 'CAPS LOCK', keyCode: 'capslock' }, { symbol: 'ф', keyCode: 'keya' }, { symbol: 'ы', keyCode: 'keys' }, {  symbol: 'в', keyCode: 'keyd' }, { symbol: 'а', keyCode: 'keyf' }, { symbol: 'п', keyCode: 'keyg' }, { symbol: 'р', keyCode: 'keyh' }, { symbol: 'о', keyCode: 'keyj' }, { symbol: 'л', keyCode: 'keyk' }, { symbol: 'д', keyCode: 'keyl' }, { symbol: 'ж', keyCode: 'semicolon' }, { symbol: 'э', keyCode: 'quote' }, { symbol: 'ENTER', keyCode: 'enter' }, { symbol: 'SHIFT', keyCode: 'shiftleft' }, { symbol: 'я', keyCode: 'keyz' }, { symbol: 'ч', keyCode: 'keyx' }, { symbol: 'с', keyCode: 'keyc' }, { symbol: 'м', keyCode: 'keyv' }, { symbol: 'и', keyCode: 'keyb' }, { symbol: 'т', keyCode: 'keyn' }, { symbol: 'ь', keyCode: 'keym' }, { symbol: 'б', keyCode: 'comma' }, { symbol: 'ю', keyCode: 'period' }, { symbol: ',', keyCode: 'slash' }, { symbol: '▲', keyCode: 'arrowup' }, { symbol: 'SHIFT', keyCode: 'shiftright' }, { symbol: 'CTRL', keyCode: 'controlleft' }, { symbol: 'WIN', keyCode: 'metaleft' }, { symbol: 'ALT', keyCode: 'altleft' }, { symbol: ' ', keyCode: 'space' }, { symbol: 'ALT', keyCode: 'altright' }, { symbol: '◄', keyCode: 'arrowleft' }, { symbol: '▼', keyCode: 'arrowdown' }, { symbol: '►', keyCode: 'arrowright' }, { symbol: 'CTRL', keyCode: 'controlright' }, ];
 
-
 const textAreaBlock = document.createElement('textarea');
 const btnClickSound = new Audio();
 btnClickSound.src = './source/2.mp3';
@@ -21,13 +20,20 @@ function createKeyboard(arr) {
   if(!localStorage.lang) {
     localStorage.setItem('lang', 'en');
   }
-  
   textAreaBlock.className = 'main-page__textarea-block textarea-block';
   main.append(textAreaBlock);
   textAreaBlock.focus();
   const keyboardBlock = document.createElement('div');
   keyboardBlock.className = 'main-page__keyboard-block keyboard-block';
   main.append(keyboardBlock);
+  const keyboardInfo = document.createElement('p');
+  keyboardInfo.className = 'main-page__text';
+  keyboardInfo.innerText = 'Клавиатура создана в операционной системе Windows';
+  main.append(keyboardInfo);
+  const keyboardLangInfo = document.createElement('p');
+  keyboardLangInfo.className = 'main-page__text';
+  keyboardLangInfo.innerText = 'Для переключения языка комбинация: левыe ctrl + alt';
+  main.append(keyboardLangInfo);
   const keyboardInnerBlock = document.createElement('div');
   keyboardInnerBlock.className = 'keyboard-block__inner-block';
   keyboardBlock.append(keyboardInnerBlock);

@@ -20,7 +20,7 @@ export function changeTextareaValue(key) {
   } else if (key === 'TAB') {
     const k = textAreaBlock;
     position = k.selectionStart;
-    k.value = `${k.value.slice(0, position)} ${k.value.slice(position)}`;
+    k.value = `${k.value.slice(0, position)}  ${k.value.slice(position)}`;
     k.selectionStart = position + 2;
     k.selectionEnd = position + 2;
   } else if (!(key === 'SHIFT' || key === 'ALT' || key === 'CTRL' || key === 'WIN' || key === 'CAPS LOCK')) {

@@ -1,10 +1,10 @@
-import { btnBlockHandler } from './button-block-handler.js';
+import btnBlockHandler from './button-block-handler.js';
 
 const btnClickSound = new Audio();
 btnClickSound.src = './source/2.mp3';
 btnClickSound.volume = 0.05;
 
-export function createBtn(
+function createBtn(
   a,
   c,
   classBlockColor,
@@ -45,3 +45,4 @@ export function createBtn(
   btnBlock.addEventListener('click', () => btnClickSound.play());
   return btnBlock;
 }
+export default createBtn;

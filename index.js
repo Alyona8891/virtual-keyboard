@@ -1,9 +1,7 @@
 import {
   keyboardEn, keyboardRu, keyboardEnShift, keyboardRuShift,
 } from './components/layots.js';
-import {
-  createBtn,
-} from './components/button.js';
+import createBtn from './components/button.js';
 import {
   changeTextareaValue, textAreaBlock,
 } from './components/change-textarea-value.js';

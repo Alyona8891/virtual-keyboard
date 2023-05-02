@@ -1,0 +1,171 @@
+.page {
+  background-color: #fcaea9;
+  font-family: "Roboto Mono", serif;
+  font-style: 500;
+}
+.main-page__text {
+  color: rgba(16, 64, 150, 1);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.textarea-block {
+  padding: 10px;
+  resize: none;
+  width: 500px;
+  height: 70px;
+  display: block;
+  color: rgba(226, 226, 226, 1);
+  outline: none;
+  background: #34566d;
+  border: 0.4px solid rgba(39, 54, 64, 0.26);
+  border-radius: 8px;
+  box-shadow: 0px 6px 10px 2px rgba(24, 73, 167, 0.2), 0px 5px 10px 0px rgba(9, 29, 68, 0.5);
+}
+
+.main-page__textarea-block {
+  margin: 30px auto 0px;
+}
+
+.main-page__keyboard-block {
+  margin: 30px auto 30px;
+}
+
+.keyboard-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 707px;
+  height: 258px;
+  background: #34566d;
+  border: 0.4px solid rgba(39, 54, 64, 0.26);
+  border-radius: 8px;
+  box-shadow: 0px 1px 1.2000000476837158px 1px rgba(221, 231, 251, 0.7) inset, 0px 6px 10px 2px rgba(24, 73, 167, 0.2), 0px 5px 10px 0px rgba(9, 29, 68, 0.5);
+}
+
+.keyboard-block__inner-block {
+  width: 95%;
+  height: 90%;
+  background: #24333e;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1.2000000476837158px 1px rgba(45, 46, 49, 1) inset;
+  padding: 1px 0px 0px 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  background: url(./source/svg-btn/key-edge-top-left.svg) no-repeat top left, url(./source/svg-btn/key-edge-top-right.svg) no-repeat top right, url(./source/svg-btn/key-edge-bottom-right.svg) no-repeat bottom right, rgba(255, 255, 255, 0.71) url(./source/svg-btn/key-edge-bottom-left.svg) no-repeat bottom left;
+  border-radius: 4px;
+  display: flex;
+  font-size: 10px;
+  line-height: 13px;
+  color: rgba(16, 64, 150, 1);
+  justify-content: center;
+  padding-top: 3px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+}
+
+.btn:active {
+  scale: 0.95;
+}
+
+.btn_active {
+  scale: 0.95;
+}
+
+.keyboard-block__btn {
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.btn__top-block {
+  width: 31px;
+  height: 31px;
+  background:rgba(226, 226, 226, 1);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.32) inset, 0px 0px 1px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.btn__top-block_orange {
+  background: rgba(255, 108, 75, 0.5);
+  box-shadow: 0px 1px 2px 0px rgba(255, 108, 75, 1) inset;
+}
+
+.btn_orange {
+  box-shadow: none;
+  background: url(./source/svg-btn/key-edge-top-left.svg) no-repeat top left, url(./source/svg-btn/key-edge-top-right.svg) no-repeat top right, url(./source/svg-btn/key-edge-bottom-right.svg) no-repeat bottom right, url(./source/svg-btn/key-edge-bottom-left.svg) no-repeat bottom left, rgba(255, 108, 75, 0.671);
+  background-blend-mode: multiply;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+ .btn_blue {
+  box-shadow: none;
+  background: url(./source/svg-btn/key-edge-top-left.svg) no-repeat top left, url(./source/svg-btn/key-edge-top-right.svg) no-repeat top right, url(./source/svg-btn/key-edge-bottom-right.svg) no-repeat bottom right, url(./source/svg-btn/key-edge-bottom-left.svg) no-repeat bottom left, rgba(53, 106, 143, 0.693);
+  background-blend-mode: multiply;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: rgba(232, 95, 86, 1);
+  
+}
+
+.btn__top-block_blue {
+  background: rgba(53, 106, 143, 0.5);
+  box-shadow: 0px 1px 2px 0px rgba(53, 106, 143, 1) inset;
+}
+
+.btn_backspace-size {
+  width: 94px;
+}
+
+.btn__top-block_backspace-size {
+  width: 84px;
+}
+
+.btn_tab-size {
+  width: 50px;
+}
+
+.btn__top-block_tab-size {
+  width: 41px;
+}
+
+.btn_enter-size {
+  width: 84px;
+}
+
+.btn__top-block_enter-size {
+  width: 76px;
+}
+
+.btn_space-size {
+  width: 294px;
+}
+
+.btn__top-block_space-size {
+  width: 283px
+}
+
+.btn__marker {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
+  background: rgba(214, 214, 214, 1);
+  border-radius: 50%;
+}
+
+.btn__marker_active {
+  box-shadow: 0px 0px 3px 3px rgba(44, 255, 25, 0.55) inset, 0px 0px 3px 3px rgba(44, 255, 25, 0.55);
+}

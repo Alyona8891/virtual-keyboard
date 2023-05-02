@@ -1,5 +1,6 @@
 import { changeTextareaValue } from './change-textarea-value.js';
 
-export function btnBlockHandler(event) {
+function btnBlockHandler(event) {
   changeTextareaValue(event.target.textContent);
 }
+export default btnBlockHandler;

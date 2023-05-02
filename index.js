@@ -79,7 +79,7 @@ function changeKeyUp(event) {
 }
 
 function createResultArr() {
-  if (localStorage.lang === 'en') {
+  if (localStorage.lang === 'en' || !localStorage.lang) {
     resultArr = keyboardEn;
   } else {
     resultArr = keyboardRu;

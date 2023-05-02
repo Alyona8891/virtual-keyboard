@@ -231,7 +231,11 @@ function handlerShift(code) {
     if (event.code !== code) {
       return;
     }
-    resultArr = keyboardEnShift;
+    if (localStorage.lang === 'en') {
+      resultArr = keyboardEnShift;
+    } else {
+      resultArr = keyboardRuShift;
+    }
     resultArr.forEach((el) => {
       const symbolProperty = el.symbol;
       if (el.symbol.length === 1) {
